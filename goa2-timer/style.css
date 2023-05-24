@@ -1,0 +1,57 @@
+
+* {
+    font-family: "Modesto Poster", "Modesto", "Basketville", serif;
+    font-variant: small-caps;
+    font-weight: bolder;
+    text-align: center;
+    width: 100%
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.bgimage {
+    position: fixed;
+    bottom: 0px;
+    object-fit: fill;
+    left: 0%;
+    width: 100%;
+    opacity: 60%;
+}
+.timer {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-size: 25vw;
+    top: 15%;
+}
+.outer{
+    position: absolute;
+    width:100%;
+    text-align: center;
+    /*top: 5%;*/
+    bottom: 0%;
+}
+.inner{ 
+    width: 25%; 
+    height: 10%;
+    display: inline-block;
+}
+.button {
+    background-color: black; 
+    color: #eee; 
+    height: 5vw;
+    width: 20vw;
+    font-size: 2vw;
+}
+::selection {
+    color: none;
+    background: none;
+}
+/* For Mozilla Firefox */
+::-moz-selection {
+    color: none;
+    background: none;
+}
