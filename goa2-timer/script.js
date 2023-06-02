@@ -10,16 +10,16 @@ let currentMode = 0 // 0=plan, 1=turnOne, 2+=turnTime
 let isRunning = false;
 
 function showTime(){
-    const prefix = (currentTime<0) ? "+" : "";
+    const prefix = (currentTime < 0) ? "+" : "";
     const positiveTime = Math.abs(currentTime)
-    const min = Math.floor(positiveTime/60);
-    const sec = positiveTime%60;
-    const spacer = (sec<10) ? "0" : "";
+    const min = Math.floor(positiveTime / 60);
+    const sec = positiveTime % 60;
+    const spacer = (sec < 10) ? "0" : "";
     const currentTimeAsText = `${prefix}${min}:${spacer}${sec}`;
     changeText.textContent = currentTimeAsText;
-    if (currentTime <= 0 && currentTime % 2 == 0 ) {
+    if ( currentTime <= 0 ) {
         document.body.style = "background: radial-gradient(#ffffff 50%, #ff0000 80%);";
-    } else if (currentTime <= 10 && currentTime % 2 == 0 ) {
+    } else if ( currentTime <= 10 ) {
         document.body.style = "background: radial-gradient(#ffffff 50%, #ff9900 80%);";
     } else {
         document.body.style = "";
@@ -83,7 +83,7 @@ function plan(){
 }
 
 function turn(){
-    currentMode += 1;
+    currentMode = 2;
     selectTime();
     startTimer();
 }

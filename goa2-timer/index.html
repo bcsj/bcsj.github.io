@@ -5,71 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guards II Timer</title>
+    <!--<link href="https://db.onlinewebfonts.com/c/40f46a2006a599684b999288e839348e?family=ModestoPosterW05-Regular" rel="stylesheet" type="text/css" />-->
+    <!--<link href="//db.onlinewebfonts.com/c/dc4ec3a9ca2e5930acdccabf43a91a18?family=ModestoW01-LiteRegular" rel="stylesheet" type="text/css"/>-->
     <link rel="icon" type="image/x-icon" href="images/icon.ico">
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        .button-group {
-            position: absolute;
-            bottom: 0%;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .reset-button {
-            --size: 40vh;
-            position: absolute;
-            left: calc(0% - var(--size)/5);
-            bottom: calc(0% - var(--size)/5);
-            box-sizing: border-box;
-            width: var(--size);
-            height: var(--size);
-            border-radius: 50% 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 8em;
-        }
-        .reset-button:hover {
-            background: radial-gradient(#ffffff00 50%, #00000099 100%);
-        }
-
-        .planning-button {
-            --size: 40vh;
-            position: absolute;
-            left: calc(50% - var(--size)/2);
-            bottom: calc(-10% - var(--size)/5);
-            box-sizing: border-box;
-            width: var(--size);
-            height: var(--size);
-            border-radius: 50% 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 8em;
-        }
-        .planning-button:hover {
-            background: radial-gradient(#ffffff00 50%, #00000099 100%);
-        }
-
-        .turn-button {
-            --size: 40vh;
-            position: absolute;
-            right: calc(0% - var(--size)/5);
-            bottom: calc(0% - var(--size)/5);
-            box-sizing: border-box;
-            width: var(--size);
-            height: var(--size);
-            border-radius: 50% 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 8em;
-        }
-        .turn-button:hover {
-            background: radial-gradient(#ffffff00 50%, #00000099 100%);
-        }
-    </style>
 </head>
 <body>
 
@@ -77,26 +16,21 @@
         <img src = "images/bgwide.png" class="bgimage" onclick="screenTap()">
     </div>
 
-    <!--<div class = "outer">
-        <div class="inner"><button class="button reset" onclick="reset()"><i class="fa fa-undo"></i>Reset</button></div>
-        <div class="inner"><button class="button plan" onclick="plan()">Plan Cards</button></div>
-        <div class="inner"><button class="button turn" onclick="turn()">Begin Turn</button></div>
-    </div>-->
+    <div class = "outer">
+        <div class = "inner"><button class="button reset" onclick="reset()">Reset</button></div>
+        <div class = "inner"><button class="button plan" onclick="plan()">Plan Cards</button></div>
+        <div class = "inner"><button class="button turn" onclick="turn()">Begin Turn</button></div>
+    </div>
+    <div class="timer" onclick="screenTap()" id="change-text">1:00</div>
 
-    <div class="button-group">
-        <div class="reset-button" onclick="reset()">
-            <i class="fa fa-refresh"></i>
-        </div>
-        <div class="planning-button" onclick="plan()">
-            <i class="fa fa-play"></i>
-        </div>
-        <div class="turn-button" onclick="turn()">
-            <i class="fa fa-forward"></i>
+    <div class="footer">
+        <div class="settings">
+            <ion-icon name="settings-outline"></ion-icon>
         </div>
     </div>
 
-    <div class="timer" onclick="screenTap()" id="change-text">1:00</div>
-
     <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
